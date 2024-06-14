@@ -42,4 +42,16 @@ class PrimeTest {
         assertEquals(false, result);
     }
 
+    @Test
+    void isPrime7(){
+        boolean result = Prime.isPrime(200);
+        assertEquals(false, result);
+    }
+
+    @Test
+    void isPrime8(){
+        boolean result = Prime.isPrime(307);
+        assertEquals(true, result);
+    }
+
 }
