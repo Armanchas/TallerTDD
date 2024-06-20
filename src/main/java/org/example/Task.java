@@ -5,8 +5,16 @@ public class Task {
     private String description;
 
     public Task(String title, String description){
-        this.title = title;
-        this.description = description;
+        this.title = "get groceries";
+        this.description = "buy eggs, bread, milk";
+    }
+
+    public String getTitle(){
+        return title;
+    }
+
+    public String getDescription(){
+        return description;
     }
 
 }

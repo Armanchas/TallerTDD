@@ -8,6 +8,8 @@ class TaskTest {
     @Test
     void createTaskTest1(){
         Task task1 = new Task("get groceries", "buy eggs, bread, milk");
+        assertEquals("get groceries", task1.getTitle());
+        assertEquals("buy eggs, bread, milk", task1.getDescription());
     }
 
 }
