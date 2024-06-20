@@ -12,4 +12,11 @@ class TaskTest {
         assertEquals("buy eggs, bread, milk", task1.getDescription());
     }
 
+    @Test
+    void createTaskTest2(){
+        Task task2 = new Task("laundry", "put clothes in the washer");
+        assertEquals("laundry", task2.getTitle());
+        assertEquals("put clothes in the washer", task2.getDescription());
+    }
+
 }
