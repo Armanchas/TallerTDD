@@ -19,4 +19,10 @@ class TaskTest {
         assertEquals("put clothes in the washer", task2.getDescription());
     }
 
+    @Test
+    void createTaskTest3(){
+        Task task2 = new Task("make lunch", "boil pasta and make sauce, serve on a plate");
+        assertEquals("make lunch", task2.getTitle());
+        assertEquals("boil pasta and make sauce, serve on a plate", task2.getDescription());
+    }
 }
