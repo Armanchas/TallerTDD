@@ -72,6 +72,41 @@ class TaskTest {
         task.setdescription(desc);
         assertEquals(desc,task.getDescription());
     }
-    
+
+    @Test
+    void deleteTaskTest1(){
+        Task task = tasks.get(2);
+        tasks.remove(task);
+        assertFalse(tasks.contains(task));
+    }
+    @Test
+    void deleteTaskTest2(){
+        Task task = tasks.get(2);
+        tasks.remove(task);
+        assertEquals(2,tasks.size());
+    }
+
+    @Test
+    void deleteTaskTest3(){
+        System.out.println("Lista de tareas"+tasks);
+        Task task = tasks.get(2);
+        tasks.remove(task);
+        assertEquals(2,tasks.size());
+        System.out.println("Lista de tareas"+tasks);
+    }
+
+    @Test
+    void completedTaskTest1(){
+        Task task = tasks.get(0);
+        task.setCompleted(true);
+        assertTrue(task.getCompleted(),"tarea completada");
+    }
+
+    @Test
+    void completedTaskTest2(){
+        Task task = tasks.get(0);
+        assertEquals(false,task.getCompleted());
+    }
+
 
 }
