@@ -17,4 +17,11 @@ public class Task {
         return description;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setdescription(String desc) {
+        this.description = desc;
+    }
 }

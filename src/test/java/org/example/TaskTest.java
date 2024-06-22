@@ -10,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class TaskTest {
 
+    private Task task;
     static List<Task> tasks = new ArrayList<>();
 
     @BeforeAll
@@ -39,5 +40,38 @@ class TaskTest {
     }
 
     //------------------------------------------------------------------------------------------------
+
+    @Test
+    void editTitleTaskTest1(){
+        Task task = tasks.get(0);
+        String title = "exercise";
+        task.setTitle(title);
+        assertEquals(title,task.getTitle());
+    }
+
+    @Test
+    void editTitleTaskTest2(){
+        Task task = tasks.get(1);
+        String title = "study";
+        task.setTitle(title);
+        assertEquals(title,task.getTitle());
+    }
+
+    @Test
+    void editDescTaskTest1(){
+        Task task = tasks.get(0);
+        String desc = "make a lot of exercise";
+        task.setdescription(desc);
+        assertEquals(desc,task.getDescription());
+    }
+
+    @Test
+    void editDescTaskTest2(){
+        Task task = tasks.get(1);
+        String desc = "read a book";
+        task.setdescription(desc);
+        assertEquals(desc,task.getDescription());
+    }
+    
 
 }
